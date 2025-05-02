@@ -5,7 +5,17 @@ class Solution:
         for num in numbers:
             frequencies[num] = frequencies.get(num, 0) + 1
 
-        sorted_items = sorted(frequencies.items(), key=lambda item: item[1], reverse=True)
+        bucket = [[] for _ in range(len(frequencies) +1)]
 
-        return [item[0] for item in sorted_items[:k]]
+        answer = []
 
+        for num, freq in frequencies:
+            bucket[freq].append(num)
+
+        for i in range(len(bucket) -1, 0, -1):
+            for num in bucket:
+                answer.append(num)
+                if len(answer) == k:
+                    return answer
+
+        return [0,0]
