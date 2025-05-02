@@ -1,6 +1,7 @@
 # 🧠 DSA Python Prep
 
 My personal journey through Data Structures and Algorithms using Python.
+As I was previously was learning Data Structures and Algorithm using the one and only Java
 
 This repository documents my learning process as I work through carefully selected DSA problems. I'm sharing my progress publicly to keep myself accountable and potentially help others on similar journeys.
 
@@ -35,12 +36,12 @@ Each `Day_XX` folder contains:
 
 ## ✅ Progress Tracker
 
-| Day | Focus Area | Problems                                            | Status |
-|-----|------------|-----------------------------------------------------|--------|
-| 01 | Arrays & Dictionaries | Two Sum, Contains Duplicate, Intersection of Arrays | ✅ Complete |
-| 02 | TBD |                                                     | ⏳ Planned |
-| 03 | TBD |                                                     | ⏳ Planned |
-| ... | ... | ...                                                 | ... |
+| Day | Focus Area | Problems                                                                    | Status |
+|-----|------------|-----------------------------------------------------------------------------|--------|
+| 01 | Arrays & Dictionaries | Two Sum, Contains Duplicate, Intersection of Arrays, Top K Frequent Element | ✅ Complete |
+| 02 | TBD |                                                                             | ⏳ Planned |
+| 03 | TBD |                                                                             | ⏳ Planned |
+| ... | ... | ...                                                                         | ... |
 
 ## 🛠️ Setup & Usage
 
