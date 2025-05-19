@@ -1,16 +1,18 @@
-def insertion_sort(arr):
-    n = len(arr)
+# Revised on 20/05/2025 02:45
+# Minor mistake on J iteration when implementing
+def insertion_sort(array):
+    n = len(array)
 
     for i in range(1, n):
-        key = arr[i]
+        key = array[i]
         j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
+        while j >= 0 and array[j] > key:
+            array[j + 1] = array[j]
             j -= 1
 
-        arr[j + 1] = key
+        array[j + 1] = key
 
-    return arr
+    return array
 
 
 def test_insertion_sort():
