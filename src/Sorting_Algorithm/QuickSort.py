@@ -1,35 +1,30 @@
-def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
+# Revised on 20/05/2025 at 02:56
+def quick_sort(array):
+    if len(array) <= 1:
+        return array
 
-    pivot = arr[0]
+    pivot = array[0]
 
-    less = [x for x in arr[1:] if x < pivot]
-    equal = [x for x in arr if x == pivot]
-    greater = [x for x in arr[1:] if x > pivot]
+    less = [x for x in array[1:] if x < pivot]
+    equal = [x for x in array if x == pivot]
+    great = [x for x in array[1:] if x > pivot]
 
-    return quick_sort(less) + equal + quick_sort(greater)
+    return quick_sort(less) + equal + quick_sort(great)
 
-# Example usage
-if __name__ == "__main__":
-    # Test with our example array
-    arr = [5, 2, 4, 6, 1, 3]
-    print("Original array:", arr)
+test_cases = [
+    ([], []),                              # Empty list
+    ([42], [42]),                          # Single element
+    ([7, 7, 7, 7], [7, 7, 7, 7]),           # Identical elements
+    ([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]),     # Already sorted
+    ([5, 4, 3, 2, 1], [1, 2, 3, 4, 5]),     # Reverse sorted
+    ([-3, -1, -7, -5], [-7, -5, -3, -1]),   # Negative numbers
+    ([3, -1, 0, -5, 2], [-5, -1, 0, 2, 3]), # Mixed positive and negative
+    ([4, 2, 2, 8, 5, 5, 9], [2, 2, 4, 5, 5, 8, 9]),  # Duplicates
+    ([5, 2, 4, 6, 1, 3], [1, 2, 3, 4, 5, 6])  # Original test case
+]
 
-    sorted_arr = quick_sort(arr)
-    print("Sorted array:", sorted_arr)
-
-    # Let's trace a simple example
-    print("\nTracing quicksort for [5, 2, 4, 6, 1, 3]:")
-    print("1. Choose pivot = 3 (last element)")
-    print("2. After first partition: [2, 1, 3, 6, 4, 5]")
-    print("   - Elements <= 3: [2, 1]")
-    print("   - Pivot (3) is at its final position")
-    print("   - Elements > 3: [6, 4, 5]")
-    print("3. Recursively sort left part [2, 1]")
-    print("   - Choose pivot = 1")
-    print("   - After partition: [1, 2]")
-    print("4. Recursively sort right part [6, 4, 5]")
-    print("   - Choose pivot = 5")
-    print("   - After partition: [4, 5, 6]")
-    print("5. Final sorted array: [1, 2, 3, 4, 5, 6]")
+print("Quick Sort Test Cases:")
+for i, (test_case, expected) in enumerate(test_cases, 1):
+    result = quick_sort(test_case[:])
+    status = "PASS" if result == expected else "FAIL"
+    print(f"Test case {i}: {test_case} -> Sorted: {result} | Expected: {expected} | Status: {status}")
