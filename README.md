@@ -1,47 +1,126 @@
 # 🧠 DSA Python Prep
 
-My personal journey through Data Structures and Algorithms using Python.
-As I was previously was learning Data Structures and Algorithm using the one and only Java
+<div align="center">
+  
+  ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+  ![License](https://img.shields.io/badge/license-MIT-green.svg)
+  
+  **My personal journey through Data Structures and Algorithms using Python**
+</div>
 
-This repository documents my learning process as I work through carefully selected DSA problems. I'm sharing my progress publicly to keep myself accountable and potentially help others on similar journeys.
+After previously learning Data Structures and Algorithms in Java, I'm now revisiting these concepts with a Pythonic approach.
+This repository documents my learning process as I tackle carefully selected DSA problems. I'm sharing my progress publicly to stay accountable and, hopefully, to help others on similar journeys.
 
-> 🎯 **Goal**: Build strong problem-solving skills with Python, progressing systematically from fundamentals to advanced concepts.
+> 🎯 **Goal**: Build robust problem-solving skills in Python, advancing systematically from fundamental to advanced DSA concepts.
 
 ## 📋 About This Journey
 
-This is my first dedicated effort to master DSA concepts through consistent practice. Each solution includes:
-- Clean, well-commented code
-- My thought process
-- Time and space complexity analysis
-- Alternative approaches when applicable
+This repository serves as a long-term preparation for coding interviews, with a target of securing a software engineering role by 2027. Although that may seem far away, I am taking a proactive approach to build my problem-solving skills early. I plan to venture into various DSA concepts, continuously refining my understanding through consistent practice.
 
-## 📚 Repository Structure
+My goal is to develop a robust foundation in Data Structures and Algorithms using Python, building on my previous experience with Java. Each solution includes:
+
+* **Clean, well-documented code** with Pythonic practices
+* **Detailed thought process** and approach explanation
+* **Complexity analysis** (time and space)
+* **Alternative solutions** when applicable
+* **Reflections** on challenges and learning takeaways
+
+## 📂 Target Repository Structure
 
 ```
 dsa-python-prep/
-├── Day_01/
-│   ├── problem_name.py
-│   ├── test_cases.py (optional)
-│   └── notes.md
-├── Day_02/
-│   ├── ...
-├── ...
+├── src/
+│   ├── Arrays_and_Strings/
+│   ├── Linked_Lists/
+│   ├── Recursion/
+│   ├── Sorting_Algorithms/
+│   ├── Stacks_and_Queues/
+│   ├── Trees_and_Graphs/
+│   ├── Dynamic_Programming/
+│   ├── Greedy_Algorithms/
+│   ├── Backtracking/
+│   ├── Bit_Manipulation/
+│   └── Design_Patterns/
 └── README.md
 ```
 
-Each `Day_XX` folder contains:
-- 📝 Problem solutions with detailed comments
-- 🧪 Test cases (when relevant)
-- 📓 Personal notes on concepts/patterns learned
+Each concept folder contains:
+
+* 📝 **Problem solutions** with detailed comments and explanations
+* 📊 **Visual illustrations** for complex algorithms where helpful
+* 📓 **Implementation notes** highlighting Python-specific techniques
+* 🔍 **Pattern recognition** guidelines to identify similar problems
 
 ## ✅ Progress Tracker
 
-| Day | Focus Area | Problems                                                                    | Status |
-|-----|------------|-----------------------------------------------------------------------------|--------|
-| 01 | Arrays & Dictionaries | Two Sum, Contains Duplicate, Intersection of Arrays, Top K Frequent Element | ✅ Complete |
-| 02 | TBD |                                                                             | ⏳ Planned |
-| 03 | TBD |                                                                             | ⏳ Planned |
-| ... | ... | ...                                                                         | ... |
+### Fundamentals
+- [x] **Big O Analysis** - Time and space complexity evaluation
+- [x] **Problem-solving strategies** - Breaking down problems systematically
+- [x] **Pythonic patterns** - Leveraging language features effectively
+
+### Data Structures
+- [x] **Arrays/Lists**
+  - [x] Traversal techniques
+  - [x] In-place operations
+  - [x] Sliding window
+  
+- [ ] **Linked Lists**
+  - [ ] Singly linked lists
+  - [ ] Doubly linked lists
+  - [ ] Fast/slow pointer techniques
+  
+- [ ] **Stacks & Queues**
+  - [ ] Implementation variants
+  - [ ] Application problems
+  
+- [ ] **Hash Tables**
+  - [ ] Dictionary implementations
+  - [ ] Collision resolution
+
+### Algorithms
+- [x] **Sorting Algorithms**
+  - [x] Insertion Sort
+  - [x] Selection Sort
+  - [x] Quick Sort
+  - [x] Merge Sort
+  - [ ] Heap Sort
+  
+- [x] **Searching Algorithms**
+  - [x] Binary Search and variants 
+  - [x] Linear search optimizations
+
+- [ ] **Recursion** *(Focus Area)*
+  - [ ] Recursive thinking patterns
+  - [ ] Base cases and recursive cases
+  - [ ] Tree-based recursion
+  - [ ] Memoization techniques
+  - [ ] Tail recursion optimization
+
+### Advanced Concepts
+- [ ] **Trees**
+  - [ ] Binary Trees
+  - [ ] Binary Search Trees
+  - [ ] Balanced Trees (AVL, Red-Black)
+  - [ ] Tree Traversals (In-order, Pre-order, Post-order, Level-order)
+  
+- [ ] **Graphs**
+  - [ ] Representation (Adjacency Matrix/List)
+  - [ ] Traversal (DFS, BFS)
+  - [ ] Shortest Path Algorithms (Dijkstra's, A*)
+  - [ ] Minimum Spanning Trees (Prim's, Kruskal's)
+  
+- [ ] **Dynamic Programming**
+  - [ ] Top-down approach (Memoization)
+  - [ ] Bottom-up approach (Tabulation)
+  - [ ] State transition patterns
+  
+- [ ] **Greedy Algorithms**
+  - [ ] Activity selection
+  - [ ] Huffman coding
+  
+- [ ] **Backtracking**
+  - [ ] Constraint satisfaction problems
+  - [ ] Combinatorial problems
 
 ## 🛠️ Setup & Usage
 
@@ -54,34 +133,74 @@ cd dsa-python-prep
 python3 -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
+# Install dependencies (if any)
+pip install -r requirements.txt
+
 # Run a specific solution
-python Day_01/two_sum.py
+python src/Arrays_and_Strings/two_sum.py
 ```
 
-## 🧭 Learning Approach
+## 📚 Study Approach
 
-Rather than following conventional topic-based buckets, I'm selecting problems that:
-- Build on previous concepts
-- Challenge me at my current skill level
-- Expose me to useful Python patterns and idioms
+I follow a methodical learning process:
 
-My philosophy is centered on **deep understanding** rather than simply passing test cases.
+1. **Understand the concept** - Study the underlying theory
+2. **Implement from scratch** - Write my own implementation without references
+3. **Optimize** - Refine for efficiency and readability
+4. **Generalize** - Identify patterns for future application
+5. **Review** - Periodic revision of previously solved problems
 
-## 🗒️ Reflection Practice
+### Weekly Focus Areas
 
-I maintain notes for each day's work that include:
-- Key insights gained
-- Patterns recognized
-- Pitfalls encountered
-- Concepts for future review
+Each week focuses on:
+- 🧩 **Core concept** (e.g., Recursion, Trees)
+- 🔄 **Implementation variations**
+- 🔗 **Connections to related problems**
+- 📈 **Progressive difficulty increase**
 
-## 💡 Personal Focus Areas
+## 🧠 Problem-Solving Framework
 
-As I progress, I'm particularly focused on mastering:
-- Efficient use of Python's built-in data structures
-- Writing idiomatic, readable Python code
-- Understanding the space-time tradeoffs of different approaches
-- Breaking down complex problems into manageable components
+For each problem, I follow this structured approach:
+
+1. **Understand** - Clarify inputs, outputs, constraints
+2. **Visualize** - Draw examples, identify patterns
+3. **Brute Force** - Develop initial working solution
+4. **Optimize** - Improve algorithm efficiency
+5. **Implement** - Write clean, documented code
+6. **Test** - Verify with multiple test cases
+7. **Reflect** - Document learnings and alternate approaches
+
+## 🗒️ Learning Journal
+
+Each implementation includes a learning journal with:
+
+- 💡 **Key insights** gained while solving
+- 🔑 **Pattern recognition** for future reference
+- 🚧 **Challenges encountered** and how they were overcome
+- 🔍 **Optimization opportunities** identified
+- 📝 **Personal notes** on Pythonic implementations
+
+## 📊 Personal Growth Metrics
+
+I track my progress through:
+
+- **Problem-solving speed** improvement
+- **Solution quality** enhancements
+- **Pattern recognition** ability
+- **Algorithm complexity** understanding
+- **Code readability** and elegance
+
+## 🔄 Revision Strategy
+
+To ensure long-term retention:
+
+- Weekly review of previously solved problems
+- Periodic implementation of the same problem with different approaches
+- Themed practice sessions focusing on specific patterns
+- Spaced repetition for challenging concepts
+
 ---
 
-*This is a personal learning repository. I welcome feedback, but remember solutions reflect my learning process at different stages.*
+<div align="center">
+  *This repository represents my personal learning journey. Constructive feedback is welcome as the solutions reflect my evolving understanding of DSA concepts.*
+</div>

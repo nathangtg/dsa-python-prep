@@ -3,9 +3,9 @@ class Solution:
         seen = set()
 
         for num in nums:
-            if num in seen:
-                return True
-            else:
+            if num not in seen:
                 seen.add(num)
+            else:
+                return True
 
         return False
