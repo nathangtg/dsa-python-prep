@@ -1,33 +1,37 @@
+# Revised on 20/05//2025
+# Minor issue, forgetting to add the base case to the recursion
 def merge_sort(array):
-    if len(array)  <= 1:
+    if len(array) <= 1:
         return array
 
-    middle = len(array) // 2
-    lh = array[:middle]
-    rh = array[middle:]
+    n = len(array)
 
-    lh = merge_sort(lh)
-    rh = merge_sort(rh)
+    middle = n // 2
+    left_half = array[:middle]
+    right_half = array[middle:]
 
-    return merge(lh, rh)
+    left_half = merge_sort(left_half)
+    right_half = merge_sort(right_half)
+
+    return merge(left_half, right_half)
 
 def merge(l, r):
-    result = []
     li = 0
     ri = 0
+    res = []
 
     while li < len(l) and ri < len(r):
         if l[li] < r[ri]:
-            result.append(l[li])
+            res.append(l[li])
             li += 1
         else:
-            result.append(r[ri])
+            res.append(r[ri])
             ri += 1
 
-    result.extend(l[li:])
-    result.extend(r[ri:])
+    res.extend(l[li:])
+    res.extend(r[ri:])
 
-    return result
+    return res
 
 if __name__ == "__main__":
     array = [5, 2, 4, 6, 1, 3]
