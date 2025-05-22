@@ -1,11 +1,11 @@
-# Revised on 20/05/2025 02:45
-# Minor mistake on J iteration when implementing
+# Revised on 22/05/2025 23:12
 def insertion_sort(array):
     n = len(array)
 
     for i in range(1, n):
         key = array[i]
         j = i - 1
+
         while j >= 0 and array[j] > key:
             array[j + 1] = array[j]
             j -= 1
@@ -13,7 +13,6 @@ def insertion_sort(array):
         array[j + 1] = key
 
     return array
-
 
 def test_insertion_sort():
     test_cases = [
