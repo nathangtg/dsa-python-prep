@@ -28,31 +28,14 @@ def heap_sort(arr):
 
 def test_heap_sort():
     test_cases = [
-        # Test case 1: Already sorted
         ([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]),
-
-        # Test case 2: Reverse sorted
         ([5, 4, 3, 2, 1], [1, 2, 3, 4, 5]),
-
-        # Test case 3: Random values
         ([4, 10, 3, 5, 1], [1, 3, 4, 5, 10]),
-
-        # Test case 4: Single element
         ([42], [42]),
-
-        # Test case 5: Empty list
         ([], []),
-
-        # Test case 6: All elements are equal
         ([7, 7, 7, 7], [7, 7, 7, 7]),
-
-        # Test case 7: With duplicates
         ([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5], [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]),
-
-        # Test case 8: Negative numbers
         ([-3, -1, -4, -2, 0], [-4, -3, -2, -1, 0]),
-
-        # Test case 9: Mixed negatives and positives
         ([7, -3, 5, -1, 0, -2], [-3, -2, -1, 0, 5, 7]),
     ]
 
