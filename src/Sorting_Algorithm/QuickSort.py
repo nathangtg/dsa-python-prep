@@ -1,15 +1,18 @@
 # Revised on 20/05/2025 at 02:56
+from numpy.ma.core import equal
+
+
 def quick_sort(array):
     if len(array) <= 1:
         return array
 
     pivot = array[0]
 
-    less = [x for x in array[1:] if x < pivot]
-    equal = [x for x in array if x == pivot]
-    great = [x for x in array[1:] if x > pivot]
+    lesser =  [x for x in array[1:] if x < pivot]
+    equal_to_pivot = [x for x in array if x == pivot]
+    greater = [x for x in array[1:] if x > pivot]
 
-    return quick_sort(less) + equal + quick_sort(great)
+    return quick_sort(lesser) + equal_to_pivot + quick_sort(greater)
 
 test_cases = [
     ([], []),                              # Empty list
