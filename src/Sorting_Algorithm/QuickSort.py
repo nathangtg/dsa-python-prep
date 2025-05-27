@@ -8,11 +8,11 @@ def quick_sort(array):
 
     pivot = array[0]
 
-    lesser =  [x for x in array[1:] if x < pivot]
-    equal_to_pivot = [x for x in array if x == pivot]
+    lesser = [x for x in array[1:] if x < pivot]
+    equal = [x for x in array if x == pivot]
     greater = [x for x in array[1:] if x > pivot]
 
-    return quick_sort(lesser) + equal_to_pivot + quick_sort(greater)
+    return quick_sort(lesser) + equal + quick_sort(greater)
 
 test_cases = [
     ([], []),                              # Empty list
